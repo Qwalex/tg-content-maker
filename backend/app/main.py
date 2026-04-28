@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from fastapi import Depends, FastAPI, Header, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import desc, select
 from sqlalchemy.orm import Session
 
@@ -36,6 +37,14 @@ from app.services.telegram_userbot import TelegramUserbotService, next_auth_stat
 
 app = FastAPI(title="Telegram AI Copier")
 telegram = TelegramUserbotService()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=settings.cors_origins_list,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.on_event("startup")

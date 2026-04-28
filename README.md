@@ -30,6 +30,7 @@ Copy `backend/.env.example` to `backend/.env` and fill values:
 - `TELEGRAM_SESSION_STRING=...` (if used by your Telegram client integration)
 - `INTERNAL_INGEST_TOKEN=...` (required, used by `/api/internal/source-events`)
 - `AUTO_CREATE_SCHEMA=false` (recommended in production; use migrations)
+- `CORS_ORIGINS=http://localhost:3000,https://your-frontend.up.railway.app`
 
 Do not commit real secrets. Rotate leaked keys immediately.
 
