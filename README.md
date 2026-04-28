@@ -59,6 +59,12 @@ npm install
 npm run dev
 ```
 
+Frontend-to-backend routing:
+
+- Browser calls use `/backend/*` and are proxied by Next rewrites.
+- Set `RAILWAY_PRIVATE_DOMAIN` in the frontend Railway service to the backend private domain so server-side requests use Railway private networking.
+- Optional fallback for local/public access: `NEXT_PUBLIC_API_BASE_URL=http://localhost:8000`.
+
 ## Core endpoints
 
 - `POST /api/sessions`
