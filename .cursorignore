@@ -1,0 +1,35 @@
+# Secrets and keys
+**/*.pem
+**/*.key
+**/*id_rsa*
+**/*id_ed25519*
+**/*.p12
+**/*.pfx
+**/secrets.*
+**/*secret*.json
+**/*credentials*.json
+
+# Local databases/dumps
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+**/*.sql
+**/dump/**
+**/backups/**
+
+# Logs and runtime artifacts
+**/*.log
+**/logs/**
+**/.pytest_cache/**
+**/.mypy_cache/**
+**/.ruff_cache/**
+**/__pycache__/**
+
+# Build / deps / generated
+**/node_modules/**
+**/.next/**
+**/dist/**
+**/build/**
+**/.venv/**
+**/venv/**
+**/coverage/**
